@@ -1,5 +1,5 @@
 {
-  "name": "example-node",
+  "name": "arweave-storage-sdk-example",
   "version": "1.0.0",
   "main": "dist/index.js",
   "scripts": {
@@ -8,11 +8,13 @@
     "dev": "ts-node src/index.ts"
   },
   "dependencies": {
-    "arweave-storage-sdk": "link:.."
+    "arweave-storage-sdk": "^1.4.4",
+    "dotenv": "^16.5.0"
   },
   "devDependencies": {
+    "@types/dotenv": "^8.2.3",
     "@types/node": "^20.11.24",
     "ts-node": "^10.9.2",
-    "typescript": "^5.3.3"
+    "typescript": "^5.2.2"
   }
 }
