@@ -4,7 +4,7 @@ import * as dotenv from 'dotenv'
 
 dotenv.config()
 
-async function main() {
+async function main(dataToWrite: string = 'test string.') {
   const config = new Configuration({
     privateKey: process.env.ARWEAVE_PRIVATE_KEY as string,
     appName: 'arfs-js-drive',
@@ -18,7 +18,7 @@ async function main() {
 
   const tags = [
     { name: 'Content-Type', value: 'text/plain' },
-    { name: 'Arweave-Transaction', value: 'test'}
+    { name: 'Arweave-Transaction', value: dataToWrite}
   ] as Tag[]
 
   const file = new Blob(['A demo file!'], { type: 'text/plain' })
