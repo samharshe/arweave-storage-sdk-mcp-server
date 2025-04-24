@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "arweave-storage-sdk": "^1.4.4"
+  }
+}
