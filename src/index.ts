@@ -32,7 +32,7 @@ server.tool("writeToArweave",
 
         const tags = [
             { name: 'Content-Type', value: 'text/plain' },
-            { name: 'Arweave-Transaction', value: dataToWrite}
+            { name: 'Arweave-Transaction', value: dataToWrite }
         ] as Tag[]
 
         const file = new Blob(['A demo file!'], { type: 'text/plain' })
