@@ -16,6 +16,8 @@
     "zod": "3.24.3"
   },
   "devDependencies": {
+    "@types/async-retry": "^1.4.9",
+    "@types/bn.js": "^5.1.6",
     "@types/dotenv": "^8.2.3",
     "@types/node": "^20.11.24",
     "ts-node": "^10.9.2",
