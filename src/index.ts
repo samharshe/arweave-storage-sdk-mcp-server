@@ -21,7 +21,10 @@ const expectedInputStructure = z.object({
 });
 
 const tolerantInputSchema = z.preprocess((rawInput) => {
-    if (typeof rawInput === 'string' && rawInput.trim().startsWith('{') && rawInput.trim().endsWith('}')) {
+    const isJsonLikeString = (input: unknown): boolean => {
+        return typeof input === 'string' && input.trim().startsWith('{') && input.trim().endsWith('}');
+    }
+    if (isJsonLikeString(rawInput)) {
         try {
             console.error(`Attempting to parse non-standard input: ${rawInput}`);
             const parser = new Function(`return ${rawInput}`);
@@ -67,7 +70,7 @@ server.tool("writeToArweave",
 
         const config = new Configuration({
             privateKey: process.env.ARWEAVE_PRIVATE_KEY as string,
-            appName: 'arfs-js-drive',
+            appName: 'arweave-storage-sdk-mcp-server',
             network: Network.ARWEAVE_MAINNET,
             token: Token.AR
         })
@@ -78,7 +81,7 @@ server.tool("writeToArweave",
 
         const tags = [
             { name: 'Content-Type', value: 'text/plain' },
-            { name: 'App-Name', value: 'arweave-demo-mcp' },
+            { name: 'App-Name', value: 'arweave-storage-sdk-mcp-server' },
             { name: 'Data-Source', value: 'Claude-Input' }
         ] as Tag[]
 
