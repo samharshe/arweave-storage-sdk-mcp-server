@@ -16,7 +16,7 @@ clone this repo and add
   }
 }
 ```
-to "~/Library/Application Support/Claude/claude_desktop_config.json" and restart Claude Desktop. (that path is for MacOS, of course; adjust according to your system. also: you may need to create this config file first if you have not yet.) you should see a little hammer icon indicating that Claude has been equipped with a tool. then, over the course of your conversation, if Claude determines that this tool would be of use, he'll call it.
+to `~/Library/Application\ Support/Claude/claude_desktop_config.json` and restart Claude Desktop. (that path is for MacOS, of course; adjust according to your system. also: you may need to create this config file first if you have not yet.) you should see a little hammer icon indicating that Claude has been equipped with a tool. then, over the course of your conversation, if Claude determines that this tool would be of use, he'll call it.
 
 in my case, I cannot figure out how to get Claude to call the tool properly. he insists on packaging the JSON
 ```
